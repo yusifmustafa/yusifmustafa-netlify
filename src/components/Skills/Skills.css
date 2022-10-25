@@ -1,0 +1,16 @@
+.skills {
+  background: linear-gradient(#f1eeee, #b2adda);
+  height: 745px;
+  background-repeat: no-repeat;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.btn {
+  margin: 0.75rem;
+  outline: none;
+  box-shadow: none;
+}
