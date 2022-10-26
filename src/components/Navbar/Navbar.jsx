@@ -1,7 +1,6 @@
 import React from "react";
-import "./Navbar.css"; 
-import MainBanner from "./MainBanner/MainBanner";
-
+import "./Navbar.css";
+import MainBanner from "../MainBanner/MainBanner";
 const Navbar = () => {
   return (
     <div>
@@ -44,7 +43,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#contact">
+                <a className="nav-link" href="/contact">
                   Contact
                 </a>
               </li>
