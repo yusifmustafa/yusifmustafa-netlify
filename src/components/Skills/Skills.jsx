@@ -1,4 +1,5 @@
 import {
+  Button,
   Divider,
   List,
   ListItem,
@@ -16,11 +17,11 @@ import { TbApi } from "react-icons/tb";
 import { makeStyles } from "@mui/styles";
 import { HiDesktopComputer } from "react-icons/hi";
 import { SiChakraui, SiMaterialui, SiRedux } from "react-icons/si";
-import { BiArrowBack } from "react-icons/bi";
 import { BsDownload } from "react-icons/bs";
 
 import "./Skills.css";
-import { Link } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
+import { Home } from "@mui/icons-material";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,54 +32,55 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Skills = () => {
+  const navigate = useNavigate();
+  const navigateToHomePage = () => {
+    navigate("/");
+  };
   const classes = useStyles();
 
   return (
     <div className="skills">
       <React.Fragment className={classes.root}>
-        <Link
-          to="/"
-          style={{
-            cursor: "pointer",
-            boxShadow: "none",
-            margin: "5px",
-            display: "flex",
-            justifyContent: "end",
-          }}
-          className="btn"
-          id="btn"
-        >
-          <div>
-            <BiArrowBack />
-            Home Page
-          </div>
-        </Link>
-        <Typography
-          variant="h4"
-          component="h2"
-          gutterBottom
-          style={{
-            marginLeft: "1rem",
-            fontFamily: "Montserrat",
-            fontWeight: 800,
-            letterSpacing: "2px",
-            fontSize: "2.5rem",
-          }}
-        >
-          Skills
-        </Typography>
-
-        <Typography className="cvtypo">
-          <a
-            className="btn btn-danger"
-            href={cv}
-            download="Yusif Mustafazadə.pdf"
+        <div className="homeButton">
+          <Button
+            className="m-2"
+            variant="contained"
+            onClick={navigateToHomePage}
           >
             <div>
-              Download Cv <BsDownload />
+              <Home />
             </div>
-          </a>
-        </Typography>
+          </Button>
+        </div>
+
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <Typography
+            variant="h4"
+            component="h2"
+            gutterBottom
+            style={{
+              marginLeft: "1rem",
+              fontFamily: "Montserrat",
+              fontWeight: 800,
+              letterSpacing: "2px",
+              fontSize: "2.5rem",
+              textAlign: "center",
+            }}
+          >
+            Skills
+          </Typography>
+          <Typography className="cvtypo">
+            <a
+              className="btn btn-danger"
+              href={cv}
+              download="Yusif Mustafazadə.pdf"
+            >
+              <div>
+                Download Cv <BsDownload />
+              </div>
+            </a>
+          </Typography>
+        </div>
 
         <Divider />
 
@@ -89,73 +91,73 @@ const Skills = () => {
         >
           <ListItem button>
             <ListItemIcon>
-              <HtmlIcon />
+              <HtmlIcon style={{ fontSize: "2.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="HTML" />
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-              <CssIcon />
+              <CssIcon style={{ fontSize: "2rem" }} />
             </ListItemIcon>
             <ListItemText primary="CSS" />
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-              <FaCss3 />
+              <FaCss3 style={{ fontSize: "1.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="SCSS" />
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-              <JavascriptIcon />
+              <JavascriptIcon style={{ fontSize: "2.2rem" }} />
             </ListItemIcon>
             <ListItemText primary="Javascript" />
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-              <FaReact />
+              <FaReact style={{ fontSize: "1.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="React Js" />
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-              <FaGithub />
+              <FaGithub style={{ fontSize: "1.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Git" />
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-              <TbApi />
+              <TbApi style={{ fontSize: "1.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Rest API" />
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-              <HiDesktopComputer />
+              <HiDesktopComputer style={{ fontSize: "1.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Responsive Design" />
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-              <SiRedux />
+              <SiRedux style={{ fontSize: "1.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Redux Toolkit" />
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-              <FaBootstrap />
+              <FaBootstrap style={{ fontSize: "1.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Bootstrap" />
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-              <SiChakraui />
+              <SiChakraui style={{ fontSize: "1.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Chakra UI" />
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-              <SiMaterialui />
+              <SiMaterialui style={{ fontSize: "1.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Material UI" />
           </ListItem>

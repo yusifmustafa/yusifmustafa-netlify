@@ -11,18 +11,24 @@ import {
 import {
   Avatar,
   Button,
-  CssBaseline, 
+  CssBaseline,
   TextField,
   Typography,
 } from "@mui/material";
 import { Box, Container } from "@mui/system";
+import { Home } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
+  const navigate = useNavigate();
+  const navigateToHomePage = () => {
+    navigate("/");
+  };
   return (
-    <div className="contact">
-      <div className="cards col-2">
+    <div className="contact col-12">
+      <div className="cards">
         <div className="card">
-          <img className="card-img-top" src={img} alt="YusifMustafazada" />
+          <img className="card-img-top col-4" src={img} alt="YusifMustafazada" />
           <div className="card-body">
             <p className="card-text">
               <div className="phone">
@@ -63,8 +69,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className="form">
-        <div className="form-input col-9">
+      <div className="form col-4">
+        <div className="form-input">
           <Container component="main" maxWidth="xs">
             <CssBaseline />
             <Box
@@ -106,6 +112,11 @@ const Contact = () => {
             </Box>
           </Container>
         </div>
+      </div>
+      <div id="homeButton" className="homeButton m-2" >
+        <Button onClick={navigateToHomePage} variant="contained">
+          <Home />
+        </Button>
       </div>
     </div>
   );

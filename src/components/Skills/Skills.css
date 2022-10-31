@@ -1,3 +1,4 @@
+ 
 .list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -10,4 +11,7 @@
   font-family: Comfortaa, cursive;
 }
 
- 
+.homeButton {
+  display: flex;
+  justify-content: flex-end;
+}

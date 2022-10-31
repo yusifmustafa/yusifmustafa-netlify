@@ -1,0 +1,8 @@
+@media screen and (max-width:480px) {
+  .hero_title{
+    font-size: 2.5rem;
+  }  
+  .hero_desc h2{
+    font-size: 1.1rem;
+  }
+}

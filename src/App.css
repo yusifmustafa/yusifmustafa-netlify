@@ -1,14 +1,15 @@
-html {
-  height: 100%;
-  width: 100%;
-}
-
 .App {
   text-align: center;
 }
 
 body {
-  background: linear-gradient(#f9f4f4, #b2adda);
-  height: 100%;
-  font-family: "Comfortaa", cursive;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#f9f4f4),
+      to(#b2adda)
+    )
+    fixed;
+  font-family: "Comfortaa", cursive; 
 }
