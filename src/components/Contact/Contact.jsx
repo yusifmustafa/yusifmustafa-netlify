@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import img from "../../images/PicsArt_09-21-12.08.00.jpg";
 import "./Contact.css";
 import {
@@ -16,10 +16,34 @@ import {
   Typography,
 } from "@mui/material";
 import { Box, Container } from "@mui/system";
+import emailjs from "@emailjs/browser";
 import { Home } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_4wofwme",
+        "template_nc0ooed",
+        form.current,
+        "95fC6IZOaxrI9XJtP"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   const navigate = useNavigate();
   const navigateToHomePage = () => {
     navigate("/");
@@ -28,7 +52,11 @@ const Contact = () => {
     <div className="contact col-12">
       <div className="cards">
         <div className="card">
-          <img className="card-img-top col-4" src={img} alt="YusifMustafazada" />
+          <img
+            className="card-img-top col-4"
+            src={img}
+            alt="YusifMustafazada"
+          />
           <div className="card-body">
             <p className="card-text">
               <div className="phone">
@@ -88,32 +116,44 @@ const Contact = () => {
                 Contact me
               </Typography>
               <Box component="form" noValidate sx={{ mt: 1 }}>
-                <TextField
-                  margin="normal"
-                  required
-                  fullWidth
-                  id="email"
-                  label="Email Address"
-                  name="email"
-                  autoComplete="email"
-                  autoFocus
-                />
-                <TextField fullWidth multiline label="Message" />
+                <form ref={form} onSubmit={sendEmail}>
+                  <TextField
+                    margin="normal"
+                    required
+                    fullWidth
+                    id="username"
+                    label="Username"
+                    name="user_name"
+                    autoComplete="username"
+                    autoFocus
+                  />
+                  <TextField
+                    margin="normal"
+                    required
+                    fullWidth
+                    id="email"
+                    label="Email Address"
+                    name="user_email"
+                    autoComplete="email"
+                    autoFocus
+                  />
+                  <TextField fullWidth multiline label="Message" />
 
-                <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  sx={{ mt: 3, mb: 2 }}
-                >
-                  Submit
-                </Button>
+                  <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    sx={{ mt: 3, mb: 2 }}
+                  >
+                    Submit
+                  </Button>
+                </form>
               </Box>
             </Box>
           </Container>
         </div>
       </div>
-      <div id="homeButton" className="homeButton m-2" >
+      <div id="homeButton" className="homeButton m-2">
         <Button onClick={navigateToHomePage} variant="contained">
           <Home />
         </Button>
