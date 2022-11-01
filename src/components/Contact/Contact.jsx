@@ -1,5 +1,8 @@
 import React, { useRef } from "react";
 import img from "../../images/PicsArt_09-21-12.08.00.jpg";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import "./Contact.css";
 import {
   FaPhoneAlt,
@@ -21,11 +24,21 @@ import { Home } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
+  const notify = () => {
+    toast.success("Mesaj uğurla göndərildi!");
+  };
+  const notify2 = () => {
+    toast.error("Mesaj göndərilmədi");
+  };
+  const navigate = useNavigate();
+  const navigateToHomePage = () => {
+    navigate("/");
+  };
+
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         "service_4wofwme",
@@ -36,18 +49,15 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          console.log("message sent");
+          notify();
         },
         (error) => {
           console.log(error.text);
+          notify2();
         }
       );
   };
 
-  const navigate = useNavigate();
-  const navigateToHomePage = () => {
-    navigate("/");
-  };
   return (
     <div className="contact col-12">
       <div className="cards">
@@ -58,7 +68,7 @@ const Contact = () => {
             alt="YusifMustafazada"
           />
           <div className="card-body">
-            <p className="card-text">
+            <div className="card-text">
               <div className="phone">
                 <h6>
                   <FaPhoneAlt /> 051-432-05-18
@@ -93,7 +103,7 @@ const Contact = () => {
                   </a>
                 </h6>
               </div>
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -115,38 +125,39 @@ const Contact = () => {
               <Typography component="h1" variant="h5">
                 Contact me
               </Typography>
-              <Box component="form" noValidate sx={{ mt: 1 }}>
-                <form ref={form} onSubmit={sendEmail}>
+              <Box sx={{ mt: 2 }}>
+                <form onSubmit={sendEmail} ref={form}>
                   <TextField
+                    name="username"
                     margin="normal"
                     required
                     fullWidth
                     id="username"
                     label="Username"
-                    name="user_name"
                     autoComplete="username"
+                    type="text"
                     autoFocus
                   />
                   <TextField
+                    name="email"
                     margin="normal"
                     required
                     fullWidth
                     id="email"
-                    label="Email Address"
-                    name="user_email"
+                    label="Email"
                     autoComplete="email"
+                    type="email"
                     autoFocus
                   />
-                  <TextField fullWidth multiline label="Message" />
-
-                  <Button
-                    type="submit"
+                  <TextField
+                    name="message"
                     fullWidth
-                    variant="contained"
-                    sx={{ mt: 3, mb: 2 }}
-                  >
-                    Submit
-                  </Button>
+                    multiline
+                    label="Message"
+                  />
+                  <div className="sendMessageBtn">
+                    <button className="btn btn-primary">Submit</button>
+                  </div>
                 </form>
               </Box>
             </Box>
@@ -158,6 +169,7 @@ const Contact = () => {
           <Home />
         </Button>
       </div>
+      <ToastContainer />
     </div>
   );
 };
