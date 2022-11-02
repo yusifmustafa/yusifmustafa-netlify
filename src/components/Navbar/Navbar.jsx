@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import MainBanner from "../MainBanner/MainBanner";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div>
@@ -15,29 +16,29 @@ const Navbar = () => {
           <div id="navbarSupportedContent">
             <ul className="navbar-nav">
               <li className="nav-item active">
-                <a className="nav-link" href="/">
+                <Link className="nav-link" href="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/about">
+                <Link className="nav-link" to="/about">
                   About
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/skills">
+                <Link className="nav-link" to="/skills">
                   Skills
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/portfolio">
+                <Link className="nav-link" to="/portfolio">
                   Portfolio
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/contact">
+                <Link className="nav-link" to="/contact">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

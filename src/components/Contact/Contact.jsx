@@ -151,6 +151,7 @@ const Contact = () => {
                   />
                   <TextField
                     name="message"
+                    margin="normal"
                     fullWidth
                     multiline
                     label="Message"

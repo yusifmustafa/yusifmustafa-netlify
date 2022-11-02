@@ -25,7 +25,7 @@ const ProjectDetail = () => {
           <div key={items.id} className="page-contain">
             <a href={items.codeLink} className="data-card">
               <h3>{items.detailHeaderTitle}</h3>
-              <h5>{items.detailBodyTitle}</h5>
+              <h5 className="itemdetailtitle">{items.detailBodyTitle}</h5>
               <div className="images">
                 <img src={items.image} alt={items.title} />
                 <img src={items.detailImageTwo} alt={items.title} />

@@ -127,15 +127,21 @@
   }
 } /*# sourceMappingURL=ProjectDetail.css.map */
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
   .page-contain .data-card h3 {
     font-size: larger;
   }
   .data-card {
-    height: 700px;
+    height: 100vh;
   }
   .page-contain .data-card h5 {
-    font-size: medium;
+    font-size: small;
+  }
+  .itemdetailtitle {
+    width: 100%;
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+    /* scrollbar-width: thin; */
   }
   .images {
     display: flex;
