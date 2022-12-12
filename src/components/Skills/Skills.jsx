@@ -7,20 +7,26 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import cv from "../../Cv docs/YusifMustafazade.pdf";
+import cv from "../../Cv docs/YusifMustafazada.pdf";
 import React from "react";
 import HtmlIcon from "@mui/icons-material/Html";
 import CssIcon from "@mui/icons-material/Css";
 import JavascriptIcon from "@mui/icons-material/Javascript";
-import { FaReact, FaGithub, FaCss3, FaBootstrap } from "react-icons/fa";
+import {
+  FaReact,
+  FaGithub,
+  FaCss3,
+  FaBootstrap,
+  FaNodeJs,
+} from "react-icons/fa";
 import { TbApi } from "react-icons/tb";
 import { makeStyles } from "@mui/styles";
 import { HiDesktopComputer } from "react-icons/hi";
-import { SiChakraui, SiMaterialui, SiRedux } from "react-icons/si";
+import { SiChakraui, SiMaterialui, SiRedux, SiMysql } from "react-icons/si";
 import { BsDownload } from "react-icons/bs";
 
 import "./Skills.css";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Home } from "@mui/icons-material";
 
 const useStyles = makeStyles((theme) => ({
@@ -89,77 +95,89 @@ const Skills = () => {
           component="nav"
           aria-label="main mailbox folders"
         >
-          <ListItem button>
+          <ListItem>
             <ListItemIcon>
               <HtmlIcon style={{ fontSize: "2.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="HTML" />
           </ListItem>
-          <ListItem button>
+          <ListItem>
             <ListItemIcon>
               <CssIcon style={{ fontSize: "2rem" }} />
             </ListItemIcon>
             <ListItemText primary="CSS" />
           </ListItem>
-          <ListItem button>
+          <ListItem>
             <ListItemIcon>
               <FaCss3 style={{ fontSize: "1.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="SCSS" />
           </ListItem>
-          <ListItem button>
+          <ListItem>
             <ListItemIcon>
               <JavascriptIcon style={{ fontSize: "2.2rem" }} />
             </ListItemIcon>
             <ListItemText primary="Javascript" />
           </ListItem>
-          <ListItem button>
+          <ListItem>
             <ListItemIcon>
               <FaReact style={{ fontSize: "1.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="React Js" />
           </ListItem>
-          <ListItem button>
+          <ListItem>
             <ListItemIcon>
               <FaGithub style={{ fontSize: "1.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Git" />
           </ListItem>
-          <ListItem button>
+          <ListItem>
             <ListItemIcon>
               <TbApi style={{ fontSize: "1.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Rest API" />
           </ListItem>
-          <ListItem button>
+          <ListItem>
             <ListItemIcon>
               <HiDesktopComputer style={{ fontSize: "1.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Responsive Design" />
           </ListItem>
-          <ListItem button>
+          <ListItem>
             <ListItemIcon>
               <SiRedux style={{ fontSize: "1.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Redux Toolkit" />
           </ListItem>
-          <ListItem button>
+          <ListItem>
             <ListItemIcon>
               <FaBootstrap style={{ fontSize: "1.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Bootstrap" />
           </ListItem>
-          <ListItem button>
+          <ListItem>
             <ListItemIcon>
               <SiChakraui style={{ fontSize: "1.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Chakra UI" />
           </ListItem>
-          <ListItem button>
+          <ListItem>
             <ListItemIcon>
               <SiMaterialui style={{ fontSize: "1.5rem" }} />
             </ListItemIcon>
             <ListItemText primary="Material UI" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <FaNodeJs style={{ fontSize: "1.5rem" }} />
+            </ListItemIcon>
+            <ListItemText primary="Node JS" />
+          </ListItem>
+          <ListItem>
+            <ListItemIcon>
+              <SiMysql style={{ fontSize: "2rem" }} />
+            </ListItemIcon>
+            <ListItemText primary="MYSQL" />
           </ListItem>
         </List>
       </React.Fragment>
