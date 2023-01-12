@@ -9,6 +9,8 @@ import {
   BirthdayReminderImg2,
   GoogleBooksImg2,
   TodoListImg2,
+  fullstackEcommerce,
+  fullstackEcommerce2,
 } from "../Portfolio/ProjectImages";
 
 export const projectData = [
@@ -61,5 +63,14 @@ export const projectData = [
     detailHeaderTitle: "Proyekt haqqında ümumi məlumat",
     detailBodyTitle:
       "Bu proyekt bəsit bir Todo List Proyektidir.Burada Redux Toolkitdən istifadə olunub.User əlavə etmək,həmçinin əlavə olunan istifadəçiləri siyahıdan silmək,hər hansı dəyişiklik etmək mümkündür.",
+  },
+  {
+    id: 6,
+    image: fullstackEcommerce,
+    title: "FullStack Ecommerce_App",
+    codeLink: "https://github.com/yusifmustafa/fullstack-booksales",
+    detailImageTwo: fullstackEcommerce2,
+    detailHeaderTitle:"Proyekt haqqında ümumi məlumat",
+    detailBodyTitle:"Bu Proyekt Kitab satışı səhifəsidir.İstənilən kitabı səbətə atıb,səbəttən silə bilərsiniz.Əlavə olaraq istənilən kitabın üzrəinə klikləyib həmən kitab haqqında məlumatları görmək mümkündür.Backend Node Js ilə yazılıb və mənə məxsusdur."
   },
 ];

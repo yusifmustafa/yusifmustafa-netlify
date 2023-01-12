@@ -8,6 +8,8 @@ import EcommerceImg2 from "../../images/myhrproject/Screenshot (85).png";
 import BirthdayReminderImg2 from "../../images/myhrproject/Screenshot (86).png";
 import GoogleBooksImg2 from "../../images/myhrproject/Screenshot (87).png";
 import TodoListImg2 from "../../images/myhrproject/Screenshot (88).png";
+import fullstackEcommerce from "../../images/Screenshot_20230111_110548.png";
+import fullstackEcommerce2 from "../../images/Screenshot_20230111_113702.png";
 export {
   hrprojectImg,
   EcommerceImg,
@@ -19,4 +21,6 @@ export {
   BirthdayReminderImg2,
   GoogleBooksImg2,
   TodoListImg2,
+  fullstackEcommerce,
+  fullstackEcommerce2,
 };
