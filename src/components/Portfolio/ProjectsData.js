@@ -77,13 +77,13 @@ export const projectData = [
       "Bu Proyekt Kitab satışı səhifəsidir.İstənilən kitabı səbətə atıb,səbəttən silə bilərsiniz.Əlavə olaraq istənilən kitabın üzrəinə klikləyib həmən kitab haqqında məlumatları görmək mümkündür.Backend Node Js ilə yazılıb və mənə məxsusdur.",
   },
   {
-    id:7,
-    image:fullstackHrModule,
-    title:"FullStack Employee Register (CRUD)",
-    codeLink:"ss",
-    detailImageTwo:fullstackHrModule2,
-    detailHeaderTitle:"Proyekt haqqında ümumi məlumat",
-    detailBodyTitle:"İşçiləri Qeydiyyatdan keçirmək,siyahıdan silmək,işçilərin məlumatlarına düzəliş etmək mümkündür.Backend Node Js ilə yazılıb,Database üçünsə MySqldən istifadə olunub."
-
-  }
+    id: 7,
+    image: fullstackHrModule,
+    title: "FullStack Employee Register (CRUD)",
+    codeLink: "https://github.com/yusifmustafa/fullstack-hrmodule",
+    detailImageTwo: fullstackHrModule2,
+    detailHeaderTitle: "Proyekt haqqında ümumi məlumat",
+    detailBodyTitle:
+      "İşçiləri Qeydiyyatdan keçirmək,siyahıdan silmək,işçilərin məlumatlarına düzəliş etmək mümkündür.Backend Node Js ilə yazılıb,Database üçünsə MySqldən istifadə olunub.",
+  },
 ];
