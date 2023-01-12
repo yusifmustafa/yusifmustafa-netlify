@@ -10,6 +10,8 @@ import GoogleBooksImg2 from "../../images/myhrproject/Screenshot (87).png";
 import TodoListImg2 from "../../images/myhrproject/Screenshot (88).png";
 import fullstackEcommerce from "../../images/Screenshot_20230111_110548.png";
 import fullstackEcommerce2 from "../../images/Screenshot_20230111_113702.png";
+import fullstackHrModule from "../../images/Screenshot_20230112_122754.png";
+import fullstackHrModule2 from "../../images/Screenshot_20230112_122718.png";
 export {
   hrprojectImg,
   EcommerceImg,
@@ -23,4 +25,6 @@ export {
   TodoListImg2,
   fullstackEcommerce,
   fullstackEcommerce2,
+  fullstackHrModule,
+  fullstackHrModule2,
 };
