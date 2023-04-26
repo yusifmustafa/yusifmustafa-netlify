@@ -7,7 +7,7 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import cv from "../../Cv docs/YusifMustafa.pdf";
+import cv from "../../Cv docs/Yusifmustafazada.pdf";
 import React from "react";
 import HtmlIcon from "@mui/icons-material/Html";
 import CssIcon from "@mui/icons-material/Css";
